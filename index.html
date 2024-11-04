@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MRT Buddy - Dhaka Metro Rail Pass Balance Checker</title>
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="MRT Buddy - Dhaka Metro Rail Pass Balance Checker">
+    <meta property="og:description" content="Check your Dhaka Metro Rail Pass balance and transaction history instantly using NFC">
+    <meta property="og:image" content="assets/cover.png">
+    <meta property="og:type" content="website">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
@@ -17,19 +22,22 @@
 
     <div class="max-w-4xl mx-auto px-4 py-8">
         <header class="text-center mb-12">
+            <img src="assets/play_store_512.png" alt="MRT Buddy Logo" class="w-24 h-24 mx-auto mb-4 rounded-lg">
             <h1 class="text-4xl font-bold text-gray-900 mb-4">
                 <span data-lang="en">MRT Buddy</span>
-                <span data-lang="bn" class="hidden">MRT Buddy (এমআরটি বাডি)</span>
+                <span data-lang="bn" class="hidden">এমআরটি বাডি</span>
             </h1>
             <p class="text-xl text-gray-600">
                 <span data-lang="en">Check your Dhaka Metro Rail Pass balance and transaction history instantly</span>
                 <span data-lang="bn" class="hidden">আপনার ঢাকা মেট্রো রেল পাসের ব্যালেন্স এবং লেনদেনের তথ্য তাৎক্ষণিকভাবে দেখুন</span>
             </p>
-
             <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk" 
-                class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-                Download Latest Release
+               class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                <span data-lang="en">Download Android App</span>
+                <span data-lang="bn" class="hidden">অ্যান্ড্রয়েড অ্যাপ ডাউনলোড করুন</span>
             </a>
+            <br><br>
+            <img src="assets/screenshot.jpg" alt="MRT Buddy Logo" class="mx-auto mb-4 rounded-lg">
         </header>
 
         <main>
@@ -48,8 +56,8 @@
                         </h3>
                         <div class="mt-2 text-red-700">
                             <p class="font-medium">
-                                <span data-lang="en">Only download MRT Buddy from this official website!</span>
-                                <span data-lang="bn" class="hidden">শুধুমাত্র এই অফিসিয়াল ওয়েবসাইট থেকে এমআরটি বাডি ডাউনলোড করুন!</span>
+                                <span data-lang="en">Only download MRT Buddy from this official GitHub page!</span>
+                                <span data-lang="bn" class="hidden">শুধুমাত্র এই অফিসিয়াল গিটহাব পেজ থেকে এমআরটি বাডি ডাউনলোড করুন!</span>
                             </p>
                             <p class="mt-2">
                                 <span data-lang="en">Do NOT download versions shared through:</span>
@@ -67,6 +75,10 @@
                                 <li>
                                     <span data-lang="en">WhatsApp forwards</span>
                                     <span data-lang="bn" class="hidden">হোয়াটসঅ্যাপ ফরওয়ার্ড</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">Third-party app stores</span>
+                                    <span data-lang="bn" class="hidden">তৃতীয় পক্ষের অ্যাপ স্টোর</span>
                                 </li>
                             </ul>
                         </div>
@@ -130,11 +142,30 @@
             </section>
         </main>
 
-        <footer class="mt-12 text-center text-gray-600">
-            <p>
+        <section class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8 text-center">
+            <p class="text-gray-600">
+                <span data-lang="en">
+                    This is an independent project and is not officially endorsed by or affiliated with Dhaka Mass Transit Company Limited (DMTCL).
+                </span>
+                <span data-lang="bn" class="hidden">
+                    এটি একটি স্বাধীন প্রকল্প এবং ঢাকা ম্যাস ট্রানজিট কোম্পানি লিমিটেড (ডিএমটিসিএল) দ্বারা অনুমোদিত বা সংযুক্ত নয়।
+                </span>
+            </p>
+        </section>
+
+        <footer class="mt-12 text-center space-y-4">
+            <p class="text-gray-600">
                 <span data-lang="en">Open source project available on</span>
                 <span data-lang="bn" class="hidden">ওপেন সোর্স প্রজেক্ট দেখুন</span>
                 <a href="https://github.com/aniruddha-adhikary/mrt-buddy" class="text-blue-600 hover:underline">GitHub</a>
+            </p>
+            
+            <p class="text-sm text-gray-500 flex items-center justify-center gap-1">
+                Made with 
+                <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                by <a href="https://linktr.ee/tuxboy" class="text-blue-600 hover:underline">Ani</a>
             </p>
         </footer>
     </div>
