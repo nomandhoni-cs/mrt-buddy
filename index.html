@@ -7,12 +7,27 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
+    <!-- Language Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <button onclick="toggleLanguage()" class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+            <span data-lang="en">বাংলা</span>
+            <span data-lang="bn" class="hidden">English</span>
+        </button>
+    </div>
+
     <div class="max-w-4xl mx-auto px-4 py-8">
         <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">MRT Buddy</h1>
-            <p class="text-xl text-gray-600">Check your Dhaka Metro Rail Pass balance and transaction history instantly</p>
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                <span data-lang="en">MRT Buddy</span>
+                <span data-lang="bn" class="hidden">MRT Buddy (এমআরটি বাডি)</span>
+            </h1>
+            <p class="text-xl text-gray-600">
+                <span data-lang="en">Check your Dhaka Metro Rail Pass balance and transaction history instantly</span>
+                <span data-lang="bn" class="hidden">আপনার ঢাকা মেট্রো রেল পাসের ব্যালেন্স এবং লেনদেনের তথ্য তাৎক্ষণিকভাবে দেখুন</span>
+            </p>
+
             <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk" 
-               class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
                 Download Latest Release
             </a>
         </header>
@@ -27,76 +42,114 @@
                         </svg>
                     </div>
                     <div class="ml-3">
-                        <h3 class="text-lg font-medium text-red-800">⚠️ Security Warning</h3>
+                        <h3 class="text-lg font-medium text-red-800">
+                            <span data-lang="en">⚠️ Security Warning</span>
+                            <span data-lang="bn" class="hidden">⚠️ নিরাপত্তা সতর্কতা</span>
+                        </h3>
                         <div class="mt-2 text-red-700">
-                            <p class="font-medium">Only download MRT Buddy from this official GitHub page!</p>
-                            <p class="mt-2">Do NOT download versions shared through:</p>
+                            <p class="font-medium">
+                                <span data-lang="en">Only download MRT Buddy from this official website!</span>
+                                <span data-lang="bn" class="hidden">শুধুমাত্র এই অফিসিয়াল ওয়েবসাইট থেকে এমআরটি বাডি ডাউনলোড করুন!</span>
+                            </p>
+                            <p class="mt-2">
+                                <span data-lang="en">Do NOT download versions shared through:</span>
+                                <span data-lang="bn" class="hidden">এই উৎসগুলি থেকে ডাউনলোড করবেন না:</span>
+                            </p>
                             <ul class="list-disc list-inside mt-2 space-y-1">
-                                <li>Google Drive links</li>
-                                <li>Telegram channels or groups</li>
-                                <li>WhatsApp forwards</li>
-                                <li>Third-party app stores</li>
-                                <li>Other unofficial sources</li>
+                                <li>
+                                    <span data-lang="en">Google Drive links</span>
+                                    <span data-lang="bn" class="hidden">গুগল ড্রাইভ লিংক</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">Telegram channels or groups</span>
+                                    <span data-lang="bn" class="hidden">টেলিগ্রাম চ্যানেল বা গ্রুপ</span>
+                                </li>
+                                <li>
+                                    <span data-lang="en">WhatsApp forwards</span>
+                                    <span data-lang="bn" class="hidden">হোয়াটসঅ্যাপ ফরওয়ার্ড</span>
+                                </li>
                             </ul>
-                            <p class="mt-2">These unofficial versions may contain malware that can steal your personal information or damage your device.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="bg-white rounded-lg shadow-md p-6 mb-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">Features</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                    <span data-lang="en">Features</span>
+                    <span data-lang="bn" class="hidden">বৈশিষ্ট্যসমূহ</span>
+                </h2>
                 <ul class="space-y-3 text-gray-700">
                     <li class="flex items-start">
                         <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        Instantly check your MRT Pass balance using NFC
+                        <span data-lang="en">Instantly check your MRT Pass balance using NFC</span>
+                        <span data-lang="bn" class="hidden">এনএফসি ব্যবহার করে তাৎক্ষণিকভাবে আপনার এমআরটি পাসের ব্যালেন্স দেখুন</span>
                     </li>
                     <li class="flex items-start">
                         <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        View your last 10 transactions
+                        <span data-lang="en">View your last 10 transactions</span>
+                        <span data-lang="bn" class="hidden">আপনার শেষ ১০টি লেনদেন দেখুন</span>
                     </li>
                     <li class="flex items-start">
                         <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                         </svg>
-                        Works with both MRT Pass and Rapid Pass
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        No internet connection required
+                        <span data-lang="en">Works with both MRT Pass and Rapid Pass</span>
+                        <span data-lang="bn" class="hidden">এমআরটি পাস এবং র‍্যাপিড পাস উভয়ের জন্য কাজ করে</span>
                     </li>
                 </ul>
             </section>
 
             <section class="bg-white rounded-lg shadow-md p-6 mb-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">How to Use</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                    <span data-lang="en">How to Use</span>
+                    <span data-lang="bn" class="hidden">ব্যবহার পদ্ধতি</span>
+                </h2>
                 <ol class="list-decimal list-inside space-y-3 text-gray-700">
-                    <li>Download and install the app</li>
-                    <li>Enable NFC on your device</li>
-                    <li>Place your MRT Pass or Rapid Pass on the back of your phone</li>
-                    <li>View your balance and transaction history instantly</li>
+                    <li>
+                        <span data-lang="en">Download and install the app</span>
+                        <span data-lang="bn" class="hidden">অ্যাপটি ডাউনলোড ও ইনস্টল করুন</span>
+                    </li>
+                    <li>
+                        <span data-lang="en">Enable NFC on your device</span>
+                        <span data-lang="bn" class="hidden">আপনার ফোনে এনএফসি চালু করুন</span>
+                    </li>
+                    <li>
+                        <span data-lang="en">Place your MRT Pass or Rapid Pass on the back of your phone</span>
+                        <span data-lang="bn" class="hidden">আপনার ফোনের পিছনে এমআরটি পাস বা র‍্যাপিড পাস রাখুন</span>
+                    </li>
+                    <li>
+                        <span data-lang="en">View your balance and transaction history instantly</span>
+                        <span data-lang="bn" class="hidden">তাৎক্ষণিকভাবে ব্যালেন্স এবং লেনদেনের তথ্য দেখুন</span>
+                    </li>
                 </ol>
-            </section>
-
-            <section class="bg-gray-100 rounded-lg p-6">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">Requirements</h2>
-                <ul class="space-y-2 text-gray-700">
-                    <li>Android 5.0 or higher</li>
-                    <li>NFC-capable device</li>
-                    <li>Dhaka MRT Pass or Rapid Pass</li>
-                </ul>
             </section>
         </main>
 
         <footer class="mt-12 text-center text-gray-600">
-            <p>Open source project available on <a href="https://github.com/aniruddha-adhikary/mrt-buddy" class="text-blue-600 hover:underline">GitHub</a></p>
+            <p>
+                <span data-lang="en">Open source project available on</span>
+                <span data-lang="bn" class="hidden">ওপেন সোর্স প্রজেক্ট দেখুন</span>
+                <a href="https://github.com/aniruddha-adhikary/mrt-buddy" class="text-blue-600 hover:underline">GitHub</a>
+            </p>
         </footer>
     </div>
+
+    <script>
+        function toggleLanguage() {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const bnElements = document.querySelectorAll('[data-lang="bn"]');
+            
+            enElements.forEach(el => el.classList.toggle('hidden'));
+            bnElements.forEach(el => el.classList.toggle('hidden'));
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = document.documentElement.lang === 'en' ? 'bn' : 'en';
+        }
+    </script>
 </body>
 </html>
