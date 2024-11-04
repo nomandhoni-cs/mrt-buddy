@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRT Buddy - Dhaka Metro Rail Pass Balance Checker</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">MRT Buddy</h1>
+            <p class="text-xl text-gray-600">Check your Dhaka Metro Rail Pass balance and transaction history instantly</p>
+            <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk" 
+               class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                Download Latest Release
+            </a>
+        </header>
+
+        <main>
+            <!-- Security Warning Section -->
+            <section class="bg-red-50 border-l-4 border-red-500 rounded-lg p-6 mb-8">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <svg class="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-lg font-medium text-red-800">⚠️ Security Warning</h3>
+                        <div class="mt-2 text-red-700">
+                            <p class="font-medium">Only download MRT Buddy from this official GitHub page!</p>
+                            <p class="mt-2">Do NOT download versions shared through:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li>Google Drive links</li>
+                                <li>Telegram channels or groups</li>
+                                <li>WhatsApp forwards</li>
+                                <li>Third-party app stores</li>
+                                <li>Other unofficial sources</li>
+                            </ul>
+                            <p class="mt-2">These unofficial versions may contain malware that can steal your personal information or damage your device.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Features</h2>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Instantly check your MRT Pass balance using NFC
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        View your last 10 transactions
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Works with both MRT Pass and Rapid Pass
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        No internet connection required
+                    </li>
+                </ul>
+            </section>
+
+            <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">How to Use</h2>
+                <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                    <li>Download and install the app</li>
+                    <li>Enable NFC on your device</li>
+                    <li>Place your MRT Pass or Rapid Pass on the back of your phone</li>
+                    <li>View your balance and transaction history instantly</li>
+                </ol>
+            </section>
+
+            <section class="bg-gray-100 rounded-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Requirements</h2>
+                <ul class="space-y-2 text-gray-700">
+                    <li>Android 5.0 or higher</li>
+                    <li>NFC-capable device</li>
+                    <li>Dhaka MRT Pass or Rapid Pass</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="mt-12 text-center text-gray-600">
+            <p>Open source project available on <a href="https://github.com/aniruddha-adhikary/mrt-buddy" class="text-blue-600 hover:underline">GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>
