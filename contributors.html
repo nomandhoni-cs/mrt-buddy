@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRT Buddy - Contributors</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Language Toggle -->
+    <div class="fixed top-4 right-4 z-50">
+        <button onclick="toggleLanguage()" class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+            <span data-lang="en">বাংলা</span>
+            <span data-lang="bn" class="hidden">English</span>
+        </button>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                <span data-lang="en">Contributors</span>
+                <span data-lang="bn" class="hidden">অংশগ্রহণকারীরা</span>
+            </h1>
+            <p class="text-xl text-gray-600">
+                <span data-lang="en">Meet the amazing people who made MRT Buddy possible</span>
+                <span data-lang="bn" class="hidden">এমআরটি বাডি সম্ভব করার জন্য যাঁরা অবদান রেখেছেন তাদের সাথে পরিচিত হন</span>
+            </p>
+        </header>
+
+        <main>
+            <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                    <span data-lang="en">Our Contributors</span>
+                    <span data-lang="bn" class="hidden">আমাদের অবদানকারীরা</span>
+                </h2>
+                <ul id="contributors-list" class="space-y-4">
+                    <!-- Contributors will be dynamically loaded here -->
+                </ul>
+            </section>
+        </main>
+
+        <footer class="mt-12 text-center space-y-4">
+            <p class="text-gray-600">
+                <span data-lang="en">Open source project available on</span>
+                <span data-lang="bn" class="hidden">ওপেন সোর্স প্রজেক্ট দেখুন</span>
+                <a href="https://github.com/aniruddha-adhikary/mrt-buddy" class="text-blue-600 hover:underline">GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            const enElements = document.querySelectorAll('[data-lang="en"]');
+            const bnElements = document.querySelectorAll('[data-lang="bn"]');
+            
+            enElements.forEach(el => el.classList.toggle('hidden'));
+            bnElements.forEach(el => el.classList.toggle('hidden'));
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = document.documentElement.lang === 'en' ? 'bn' : 'en';
+        }
+
+        async function loadContributors() {
+            try {
+                const response = await fetch('contributors.json');
+                const contributors = await response.json();
+                const contributorsList = document.getElementById('contributors-list');
+                
+                contributors.forEach(contributor => {
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('flex', 'items-center', 'space-x-4');
+                    
+                    listItem.innerHTML = `
+                        <img src="${contributor.avatar_url}" alt="${contributor.username}'s Avatar" class="w-12 h-12 rounded-full">
+                        <div>
+                            <p class="text-lg font-semibold text-gray-800">
+                                <a href="https://github.com/${contributor.username}" target="_blank" class="text-blue-600 hover:underline">
+                                    ${contributor.username}
+                                </a>
+                            </p>
+                        </div>
+                    `;
+                    
+                    contributorsList.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error('Failed to load contributors:', error);
+            }
+        }
+
+        // Call loadContributors on page load
+        window.onload = loadContributors;
+    </script>
+</body>
+</html>
