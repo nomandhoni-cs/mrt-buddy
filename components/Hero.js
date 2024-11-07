@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { GridPattern } from './GridPattern';
 import { AnimatedDownloadButtonClient } from './AnimatedDownloadButtonClient';
 import { Apple, Download } from 'lucide-react';
+import { sendGAEvent } from '@next/third-parties/google'
 
 export const Hero = ({ handleDownloadClick, isAnimating }) => (
   <section className="relative pt-36 sm:pt-40 pb-16 sm:pb-20 overflow-hidden">
@@ -32,12 +33,12 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
               icon={Download}
               initialText="Download for Android"
               changeText="Downloaded!"
-              onClick={handleDownloadClick}
+              onClick={() => {handleDownloadClick(); sendGAEvent({ event: 'download', value: 'android' });}}
               isAnimating={isAnimating}
             />
           </a>
           <a href="https://apps.apple.com/app/mrt-buddy/id6737849667">
-            <img src="/app_store.svg" alt="Download on the App Store" />
+            <img src="/app_store.svg" alt="Download on the App Store" onClick={sendGAEvent({ event: 'download', value: 'ios' })} />
           </a>
         </div>
       </div>

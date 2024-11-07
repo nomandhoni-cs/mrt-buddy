@@ -14,7 +14,7 @@ export const DownloadSection = ({ handleDownloadClick, isAnimating, showConfetti
             icon={Download}
             initialText="Download for Android"
             changeText="Downloaded!"
-            onClick={handleDownloadClick}
+            onClick={() => {handleDownloadClick(); sendGAEvent({ event: 'download', value: 'android' });}}
             isAnimating={isAnimating}
           />
         </a>
