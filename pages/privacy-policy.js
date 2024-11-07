@@ -1,6 +1,6 @@
 import React from 'react';
 import { StickyNavbar } from '../components/Navbar';
-import Link from 'next/link';
+import { Footer } from '../components/Footer';
 
 export default function PrivacyPolicy() {
   return (
@@ -72,19 +72,7 @@ export default function PrivacyPolicy() {
         </div>
       </main>
 
-      <footer className="container mx-auto px-4 py-8 text-center text-gray-600">
-        <p>
-          Website developed by{" "}
-          <a
-            href="https://irfanhasan.vercel.app"
-            className="text-blue-600 hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Irfan
-          </a>
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

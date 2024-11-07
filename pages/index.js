@@ -1,9 +1,9 @@
 import React from 'react';
 import { StickyNavbar } from '../components/Navbar';
-import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Download, Apple } from 'lucide-react';
 import dynamic from 'next/dynamic';
+import { Footer } from '../components/Footer';
 
 // Import client-side components
 const AnimatedDownloadButtonClient = dynamic(() => import('../components/AnimatedDownloadButton'), { ssr: false });
@@ -163,14 +163,14 @@ const HomeComponent = () => {
   };
 
   const devices = [
-    '/1.png',
-    '/2.jpg'
+    '/1.jpeg',
+    '/2.jpeg'
   ];
 
   const features = [
     {
       title: 'NFC Card Reader',
-      description: 'Instantly check your MRT Pass balance using NFC',
+      description: 'Instantly check your MRT Pass balance',
       icon: '📱'
     },
     {
@@ -210,22 +210,24 @@ const HomeComponent = () => {
               Manage your MRT cards, check fares, and track your journeys with ease using NFC technology
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-              <AnimatedDownloadButtonClient
-                platform="android"
-                icon={Download}
-                initialText="Download for Android"
-                changeText="Downloaded!"
-                onClick={handleDownloadClick}
-                isAnimating={isAnimating}
-              />
-              <AnimatedDownloadButtonClient
+              <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk">
+                <AnimatedDownloadButtonClient
+                  platform="android"
+                  icon={Download}
+                  initialText="Download for Android"
+                  changeText="Downloaded!"
+                  onClick={handleDownloadClick}
+                  isAnimating={isAnimating}
+                />
+              </a>
+              {/* <AnimatedDownloadButtonClient
                 platform="ios"
                 icon={Apple}
                 initialText="Download for iOS"
                 changeText="Downloaded!"
                 onClick={handleDownloadClick}
                 isAnimating={isAnimating}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -305,19 +307,7 @@ const HomeComponent = () => {
         </div>
       </section>
 
-      <footer className="py-8 text-center text-gray-600 border-t border-gray-100">
-        <p className="text-sm">
-          Built with ❤️ by{' '}
-          <a
-            href="https://irfanhasan.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            Irfan
-          </a>
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 };

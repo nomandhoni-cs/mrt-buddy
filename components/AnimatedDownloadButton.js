@@ -21,7 +21,7 @@ const AnimatedDownloadButton = ({ platform, icon: Icon, initialText, changeText,
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
-      <Icon className="w-5 h-5" />
+      <Icon className="w-5 h-5 pr-1" />
       <span>{isClicked ? changeText : initialText}</span>
     </motion.button>
   );

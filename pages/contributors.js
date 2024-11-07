@@ -1,7 +1,7 @@
 import React from 'react';
 import { StickyNavbar } from '../components/Navbar';
-import Link from 'next/link';
 import contributors from './contributors.json';
+import { Footer } from '../components/Footer';
 
 export default function Contributors() {
   return (
@@ -39,20 +39,7 @@ export default function Contributors() {
         </div>
       </section>
 
-      {/* Developer Credit */}
-      <footer className="py-8 text-center text-gray-600 border-t border-gray-100">
-        <p className="text-sm">
-          Built with ❤️ by{' '}
-          <a
-            href="https://irfanhasan.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            Irfan
-          </a>
-        </p>
-      </footer>
+      <Footer />
     </main>
   );
 }
