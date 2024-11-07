@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { GridPattern } from './GridPattern';
 import { AnimatedDownloadButtonClient } from './AnimatedDownloadButtonClient';
-import { Download } from 'lucide-react';
+import { Apple, Download } from 'lucide-react';
 
 export const Hero = ({ handleDownloadClick, isAnimating }) => (
   <section className="relative pt-36 sm:pt-40 pb-16 sm:pb-20 overflow-hidden">
@@ -32,6 +32,16 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
               icon={Download}
               initialText="Download for Android"
               changeText="Downloaded!"
+              onClick={handleDownloadClick}
+              isAnimating={isAnimating}
+            />
+          </a>
+          <a href="https://apps.apple.com/app/mrt-buddy/id6737849667">
+            <AnimatedDownloadButtonClient
+              platform="android"
+              icon={Apple}
+              initialText="Download for iPhone"
+              changeText="Enjoy"
               onClick={handleDownloadClick}
               isAnimating={isAnimating}
             />
