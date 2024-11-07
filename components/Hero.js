@@ -37,14 +37,7 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
             />
           </a>
           <a href="https://apps.apple.com/app/mrt-buddy/id6737849667">
-            <AnimatedDownloadButtonClient
-              platform="android"
-              icon={Apple}
-              initialText="Download for iPhone"
-              changeText="Enjoy"
-              onClick={handleDownloadClick}
-              isAnimating={isAnimating}
-            />
+            <img src="/app_store.svg" alt="Download on the App Store" />
           </a>
         </div>
       </div>

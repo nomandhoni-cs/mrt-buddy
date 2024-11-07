@@ -18,16 +18,9 @@ export const DownloadSection = ({ handleDownloadClick, isAnimating, showConfetti
             isAnimating={isAnimating}
           />
         </a>
-          <a href="https://apps.apple.com/app/mrt-buddy/id6737849667">
-            <AnimatedDownloadButtonClient
-              platform="ios"
-              icon={Apple}
-              initialText="Download for iPhone"
-              changeText="Enjoy"
-              onClick={handleDownloadClick}
-              isAnimating={isAnimating}
-            />
-          </a>
+        <a href="https://apps.apple.com/app/mrt-buddy/id6737849667">
+          <img src="/app_store.svg" alt="Download on the App Store" />
+        </a>
       </div>
       <p className="text-gray-600 mt-4">⚠️ While our app is pending Play Store approval, get updates on our WhatsApp channel:</p>
       <a href="https://whatsapp.com/channel/0029VaurMehLI8Yeb3STq42g" className="text-blue-600 hover:text-blue-800 mt-2 inline-block">
