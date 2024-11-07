@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { StickyNavbar } from '../components/Navbar';
 import dynamic from 'next/dynamic';
 import { Footer } from '../components/Footer';
@@ -24,6 +25,9 @@ const HomeComponent = () => {
 
   return (
     <main className="min-h-screen bg-white">
+      <Head>
+        <title>MRT Buddy - Your Dhaka Metro Rail Companion</title>
+      </Head>
       <StickyNavbar />
       <Hero handleDownloadClick={handleDownloadClick} isAnimating={isAnimating} />
       <DeviceShowcase />

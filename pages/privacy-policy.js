@@ -1,10 +1,14 @@
 import React from 'react';
+import Head from 'next/head';
 import { StickyNavbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
+      <Head>
+        <title>Privacy Policy - MRT Buddy</title>
+      </Head>
       <StickyNavbar />
 
       <main className="container mx-auto px-4 pt-24 pb-16">

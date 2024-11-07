@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { StickyNavbar } from '../components/Navbar';
 import contributors from './contributors.json';
 import { Footer } from '../components/Footer';
@@ -6,6 +7,9 @@ import { Footer } from '../components/Footer';
 export default function Contributors() {
   return (
     <main className="flex min-h-screen flex-col items-center">
+      <Head>
+        <title>Contributors - MRT Buddy</title>
+      </Head>
       <StickyNavbar />
 
       <section className="relative pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-hidden w-full">

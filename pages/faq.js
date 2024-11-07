@@ -1,10 +1,14 @@
 import React from 'react';
+import Head from 'next/head';
 import { StickyNavbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 export default function FAQ() {
   return (
     <div className="min-h-screen bg-white">
+      <Head>
+        <title>FAQ - MRT Buddy</title>
+      </Head>
       <StickyNavbar />
 
       <main className="container mx-auto px-4 pt-24 pb-16">
