@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/router';
 
-export function StickyNavbar() {
+export const StickyNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const router = useRouter();
 
@@ -37,6 +37,14 @@ export function StickyNavbar() {
     };
   }, [isNavOpen]);
 
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/contributors', label: 'Contributors' },
+    { href: '/privacy-policy', label: 'Privacy Policy' },
+    { href: '/#download', label: 'Download' },
+    { href: 'http://github.com/aniruddha-adhikary/mrt-buddy', label: 'GitHub', external: true },
+  ];
+
   return (
     <div className="relative w-full">
       <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
@@ -49,24 +57,16 @@ export function StickyNavbar() {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-8">
-              <Link href="/" className="text-gray-900 hover:text-gray-600">
-                Home
-              </Link>
-              <Link href="/#download" className="text-gray-900 hover:text-gray-600">
-                Download
-              </Link>
-              <Link href="/contributors" className="text-gray-900 hover:text-gray-600">
-                Contributors
-              </Link>
-              <Link href="/faq" className="text-gray-900 hover:text-gray-600">
-                FAQ
-              </Link>
-              <Link href="/privacy-policy" className="text-gray-900 hover:text-gray-600">
-                Privacy Policy
-              </Link>
-              <a target="_blank" href="http://github.com/aniruddha-adhikary/mrt-buddy" className="text-gray-900 hover:text-gray-600">
-                GitHub
-              </a>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-900 hover:text-gray-600"
+                  target={link.external ? '_blank' : undefined}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
 
             {/* Mobile Menu Button */}
@@ -88,7 +88,7 @@ export function StickyNavbar() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d={isNavOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                  d={isNavOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
                 />
               </svg>
             </button>
@@ -102,34 +102,17 @@ export function StickyNavbar() {
             style={{ top: '64px', height: 'calc(100vh - 64px)' }}
           >
             <nav className="px-2 pt-2 pb-3 space-y-1">
-              <Link
-                href="/"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
-                onClick={toggleNav}
-              >
-                Home
-              </Link>
-              <Link
-                href="/contributors"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
-                onClick={toggleNav}
-              >
-                Contributors
-              </Link>
-              <Link
-                href="/privacy-policy"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
-                onClick={toggleNav}
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/#download"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
-                onClick={toggleNav}
-              >
-                Download
-              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
+                  onClick={toggleNav}
+                  target={link.external ? '_blank' : undefined}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
@@ -137,4 +120,6 @@ export function StickyNavbar() {
       <div className="h-16" /> {/* Spacer for fixed header */}
     </div>
   );
-}
+};
+
+export default StickyNavbar;
