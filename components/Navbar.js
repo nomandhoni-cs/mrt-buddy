@@ -42,7 +42,7 @@ export function StickyNavbar() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="text-xl font-medium flex">
+            <Link href="/" className="text-xl font-medium flex items-center">
               <img src="/icon-512.png" className="h-10 w-10 md:h-8 md:w-8 lg:h-6 lg:w-6 mr-2" />
               <span>MRT Buddy</span>
             </Link>
