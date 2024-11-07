@@ -5,7 +5,7 @@ import { sendGAEvent } from '@next/third-parties/google'
 export const DownloadSection = ({ handleDownloadClick, isAnimating }) => (
   <section id="download" className="py-16 sm:py-24">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-      <div className="flex flex-col sm:flex-row justify-center gap-4">
+      <div className="flex flex-row items-center justify-center gap-4">
         <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk">
           <AndroidDownloadButton
             onClick={() => {
