@@ -24,7 +24,7 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
           </h1>
         </motion.div>
         <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-          Manage your MRT cards, check fares, and track your journeys with ease using NFC technology
+          Manage your Dhaka MRT cards, check fares, and track your journeys with ease using NFC technology
         </p>
         <div className="flex flex-row items-center justify-center gap-4 mt-8">
           <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk">
