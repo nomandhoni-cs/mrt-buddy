@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import AndroidDownloadButton from './AndroidDownloadButton';
 
 const AnimatedDownloadButton = ({ platform, icon: Icon, initialText, changeText, onClick, isAnimating }) => {
   const [isClicked, setIsClicked] = useState(false);
@@ -15,15 +15,10 @@ const AnimatedDownloadButton = ({ platform, icon: Icon, initialText, changeText,
   };
 
   return (
-    <motion.button
+    <AndroidDownloadButton 
       onClick={handleClick}
-      className={`download-button ${isClicked ? 'success' : ''}`}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      <Icon className="w-5 h-5 pr-1" />
-      <span>{isClicked ? changeText : initialText}</span>
-    </motion.button>
+      isClicked={isClicked}
+    />
   );
 };
 

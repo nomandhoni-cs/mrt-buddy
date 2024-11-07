@@ -9,15 +9,12 @@ import { Features } from '../components/Features';
 import { DownloadSection } from '../components/DownloadSection';
 
 const HomeComponent = () => {
-  const [showConfetti, setShowConfetti] = React.useState(false);
   const [isAnimating, setIsAnimating] = React.useState(false);
 
   const handleDownloadClick = () => {
     if (!isAnimating) {
-      setShowConfetti(true);
       setIsAnimating(true);
       setTimeout(() => {
-        setShowConfetti(false);
         setIsAnimating(false);
       }, 2000);
     }
@@ -35,7 +32,6 @@ const HomeComponent = () => {
       <DownloadSection 
         handleDownloadClick={handleDownloadClick}
         isAnimating={isAnimating}
-        showConfetti={showConfetti}
       />
       <Footer />
     </main>

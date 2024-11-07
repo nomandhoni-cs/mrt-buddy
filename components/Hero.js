@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GridPattern } from './GridPattern';
-import { AnimatedDownloadButtonClient } from './AnimatedDownloadButtonClient';
+import AndroidDownloadButton from './AndroidDownloadButton';
 import { Apple, Download } from 'lucide-react';
 import { sendGAEvent } from '@next/third-parties/google'
 
@@ -28,17 +28,16 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
           <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk">
-            <AnimatedDownloadButtonClient
-              platform="android"
-              icon={Download}
-              initialText="Download for Android"
-              changeText="Downloaded!"
-              onClick={() => {handleDownloadClick(); sendGAEvent({ event: 'download', value: 'android' });}}
-              isAnimating={isAnimating}
+            <AndroidDownloadButton
+              onClick={() => {
+                handleDownloadClick();
+                sendGAEvent({ event: 'download', value: 'android' });
+              }}
+              isClicked={isAnimating}
             />
           </a>
           <a href="https://apps.apple.com/app/mrt-buddy/id6737849667">
-            <img src="/app_store.svg" alt="Download on the App Store" onClick={sendGAEvent({ event: 'download', value: 'ios' })} />
+            <img src="/app_store.svg" alt="Download on the App Store" onClick={() => sendGAEvent({ event: 'download', value: 'ios' })} style={{ width: '150px', height: 'auto' }} />
           </a>
         </div>
       </div>
