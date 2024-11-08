@@ -48,13 +48,6 @@ export default function FAQ() {
                     The app is currently undergoing Google's review process. We've submitted it to the Play Store and are working to ensure it meets all of Google's quality and security standards. We'll make it available as soon as the review process is complete.
                   </p>
                 </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Is there an iOS version available?</h3>
-                  <p className="text-gray-700">
-                    Yes, we've developed an iOS version of MRT Buddy! It's currently in Apple's review process. Once approved, it will be available on the App Store.
-                  </p>
-                </div>
               </div>
             </div>
 
