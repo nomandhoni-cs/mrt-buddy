@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:locale" content="en_US" />
         <meta property="og:title" content="MRT Buddy - Your Dhaka Metro Rail Companion App" />
         <meta property="og:description" content="MRT Buddy is an unofficial community-driven Android app designed to check the balance of your Dhaka MRT Card. It reads the last 10 transactions from the RapidPass / MRT Card. No internet connectivity required. This app is not affiliated with DMTCL, JICA, Government of Bangladesh or any of its affiliates" />
-        <meta property="og:image" content="/cover.png" />
+        <meta property="og:image" content="https://mrtbuddy.com/cover.png" />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }) {
         <meta property="twitter:url" content="https://mrtbuddy.com/" />
         <meta name="twitter:title" content="MRT Buddy - Your Dhaka Metro Rail Companion App" />
         <meta name="twitter:description" content="MRT Buddy is an unofficial community-driven Android app designed to check the balance of your Dhaka MRT Card. It reads the last 10 transactions from the RapidPass / MRT Card. No internet connectivity required. This app is not affiliated with DMTCL, JICA, Government of Bangladesh or any of its affiliates" />
-        <meta property="twitter:image" content="/cover.png" />
+        <meta property="twitter:image" content="https://mrtbuddy.com/cover.png" />
 
       </Head>
       <Component {...pageProps} />
