@@ -13,6 +13,15 @@ export default function App({ Component, pageProps }) {
   return (
     <main className={notoSans.className}>
       <Head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "MRT Buddy",
+            "url": "https://mrtbuddy.com",
+            "description": "Your Dhaka Metro Rail Companion App"
+          })}
+        </script>
 
         <meta property="og:url" content="https://mrtbuddy.com/" />
         <meta property="og:type" content="website" />
