@@ -6,5 +6,5 @@ const ClientWrapper = ({ children }) => {
 };
 
 export default dynamic(() => Promise.resolve(ClientWrapper), {
-  ssr: false
+  ssr: false,
 });

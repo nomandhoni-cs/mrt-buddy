@@ -11,7 +11,7 @@ export const GridPattern = ({
   numSquares = 200,
   maxOpacity = 0.5,
   duration = 1,
-  repeatDelay = 0.5
+  repeatDelay = 0.5,
 }) => (
   <div className={`absolute inset-0 overflow-hidden ${className}`}>
     <motion.div
@@ -47,7 +47,7 @@ export const GridPattern = ({
                 duration,
                 repeat: Infinity,
                 repeatDelay: Math.random() * repeatDelay,
-                ease: "linear"
+                ease: 'linear',
               }}
               className="text-gray-300"
             />

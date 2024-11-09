@@ -14,7 +14,9 @@ const AndroidDownloadButton = ({ onClick, isClicked }) => {
     >
       <LogoAndroid className="w-10 h-auto pr-1" />
       <div className="flex flex-col items-start">
-        <span className="text-[10px] leading-none opacity-80">Download APK</span>
+        <span className="text-[10px] leading-none opacity-80">
+          Download APK
+        </span>
         <span className="text-[20px] font-medium leading-tight">Android</span>
       </div>
     </motion.button>

@@ -6,7 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "npx prettier --write \"**/*.js\" --ignore-path .gitignore",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -28,5 +30,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "*.js": "npx prettier --ignore-path .gitignore"
   }
 }

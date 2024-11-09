@@ -6,18 +6,18 @@ export const Features = () => {
     {
       title: 'NFC Card Reader',
       description: 'Instantly check your MRT Pass balance',
-      icon: '📱'
+      icon: '📱',
     },
     {
       title: 'Transaction History',
       description: 'View your last 10 transactions',
-      icon: '📊'
+      icon: '📊',
     },
     {
       title: 'Pass Compatibility',
       description: 'Works with both MRT Pass and Rapid Pass',
-      icon: '💳'
-    }
+      icon: '💳',
+    },
   ];
 
   return (

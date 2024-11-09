@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import AndroidDownloadButton from './AndroidDownloadButton';
 
-const AnimatedDownloadButton = ({ platform, icon: Icon, initialText, changeText, onClick, isAnimating }) => {
+const AnimatedDownloadButton = ({
+  platform,
+  icon: Icon,
+  initialText,
+  changeText,
+  onClick,
+  isAnimating,
+}) => {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
@@ -14,12 +21,7 @@ const AnimatedDownloadButton = ({ platform, icon: Icon, initialText, changeText,
     }
   };
 
-  return (
-    <AndroidDownloadButton 
-      onClick={handleClick}
-      isClicked={isClicked}
-    />
-  );
+  return <AndroidDownloadButton onClick={handleClick} isClicked={isClicked} />;
 };
 
 export default AnimatedDownloadButton;

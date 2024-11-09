@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export const StickyNavbar = () => {
@@ -7,7 +7,7 @@ export const StickyNavbar = () => {
   const router = useRouter();
 
   const toggleNav = () => {
-    setIsNavOpen(prevState => !prevState);
+    setIsNavOpen((prevState) => !prevState);
   };
 
   // Close menu when route changes
@@ -43,7 +43,11 @@ export const StickyNavbar = () => {
     { href: '/contributors', label: 'Contributors' },
     { href: '/faq', label: 'FAQ' },
     { href: '/privacy-policy', label: 'Privacy Policy' },
-    { href: 'http://github.com/aniruddha-adhikary/mrt-buddy', label: 'GitHub', external: true },
+    {
+      href: 'http://github.com/aniruddha-adhikary/mrt-buddy',
+      label: 'GitHub',
+      external: true,
+    },
   ];
 
   return (
@@ -89,7 +93,11 @@ export const StickyNavbar = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d={isNavOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+                  d={
+                    isNavOpen
+                      ? 'M6 18L18 6M6 6l12 12'
+                      : 'M4 6h16M4 12h16M4 18h16'
+                  }
                 />
               </svg>
             </button>
@@ -97,8 +105,11 @@ export const StickyNavbar = () => {
 
           {/* Mobile Menu */}
           <div
-            className={`fixed inset-0 z-40 bg-white transform transition-all duration-300 ease-in-out lg:hidden ${isNavOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
-              }`}
+            className={`fixed inset-0 z-40 bg-white transform transition-all duration-300 ease-in-out lg:hidden ${
+              isNavOpen
+                ? 'translate-x-0 opacity-100'
+                : 'translate-x-full opacity-0'
+            }`}
             style={{ top: '64px', height: 'calc(100vh - 64px)' }}
           >
             <nav className="px-2 pt-2 pb-3 space-y-1">

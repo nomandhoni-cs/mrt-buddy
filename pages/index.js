@@ -26,10 +26,13 @@ const HomeComponent = () => {
         <title>MRT Buddy - Your Dhaka Metro Rail Companion</title>
       </Head>
       <StickyNavbar />
-      <Hero handleDownloadClick={handleDownloadClick} isAnimating={isAnimating} />
+      <Hero
+        handleDownloadClick={handleDownloadClick}
+        isAnimating={isAnimating}
+      />
       <DeviceShowcase />
       <Features />
-      <DownloadSection 
+      <DownloadSection
         handleDownloadClick={handleDownloadClick}
         isAnimating={isAnimating}
       />

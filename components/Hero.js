@@ -3,15 +3,11 @@ import { motion } from 'framer-motion';
 import { GridPattern } from './GridPattern';
 import AndroidDownloadButton from './AndroidDownloadButton';
 import { Apple, Download } from 'lucide-react';
-import { sendGAEvent } from '@next/third-parties/google'
+import { sendGAEvent } from '@next/third-parties/google';
 
 export const Hero = ({ handleDownloadClick, isAnimating }) => (
   <section className="relative pt-36 sm:pt-40 pb-16 sm:pb-20 overflow-hidden">
-    <GridPattern
-      className="opacity-30"
-      numSquares={150}
-      maxOpacity={0.3}
-    />
+    <GridPattern className="opacity-30" numSquares={150} maxOpacity={0.3} />
     <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
       <div className="max-w-3xl mx-auto mb-12 sm:mb-20">
         <motion.div
@@ -24,7 +20,8 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
           </h1>
         </motion.div>
         <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-          Manage your Dhaka MRT cards, check fares, and track your journeys with ease using NFC technology
+          Manage your Dhaka MRT cards, check fares, and track your journeys with
+          ease using NFC technology
         </p>
         <div className="flex flex-row items-center justify-center gap-4 mt-8">
           <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk">
@@ -37,7 +34,12 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
             />
           </a>
           <a href="https://apps.apple.com/app/mrt-buddy/id6737849667">
-            <img src="/app_store.svg" alt="Download on the App Store" onClick={() => sendGAEvent({ event: 'download', value: 'ios' })} style={{ width: '150px', height: 'auto' }} />
+            <img
+              src="/app_store.svg"
+              alt="Download on the App Store"
+              onClick={() => sendGAEvent({ event: 'download', value: 'ios' })}
+              style={{ width: '150px', height: 'auto' }}
+            />
           </a>
         </div>
       </div>

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
@@ -7,23 +7,25 @@ import pre_contributors from './contributors.json';
 import { Footer } from '../components/Footer';
 
 export default function Contributors() {
-
   // pre dumped contributors list
   const [contributors, setContributors] = useState(pre_contributors);
 
   // Fetch contributors from GitHub API dynamically
   useEffect(() => {
     // console.log(contributors);
-    fetch("https://api.github.com/repos/aniruddha-adhikary/mrt-buddy/contributors").then(res => res.json()).then((data) => {
-      const list = data.map((contributor) => {
-        return {
-          username: contributor.login,
-          avatar_url: contributor.avatar_url
-        };
+    fetch(
+      'https://api.github.com/repos/aniruddha-adhikary/mrt-buddy/contributors'
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        const list = data.map((contributor) => {
+          return {
+            username: contributor.login,
+            avatar_url: contributor.avatar_url,
+          };
+        });
+        setContributors(list);
       });
-      setContributors(list);
-    });
-
   }, []);
 
   return (

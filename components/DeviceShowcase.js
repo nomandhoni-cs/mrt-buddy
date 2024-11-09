@@ -19,7 +19,7 @@ export const DeviceShowcase = () => {
                   style={{
                     maxWidth: '100%',
                     height: 'auto',
-                    aspectRatio: '408/652'
+                    aspectRatio: '408/652',
                   }}
                 />
               </div>
