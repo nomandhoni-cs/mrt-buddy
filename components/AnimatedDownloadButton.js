@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import AndroidDownloadButton from './AndroidDownloadButton';
+import React, { useState } from "react";
+import AndroidDownloadButton from "./AndroidDownloadButton";
 
 const AnimatedDownloadButton = ({
   platform,

@@ -1,6 +1,6 @@
-import React from 'react';
-import AndroidDownloadButton from './AndroidDownloadButton';
-import { sendGAEvent } from '@next/third-parties/google';
+import React from "react";
+import AndroidDownloadButton from "./AndroidDownloadButton";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export const DownloadSection = ({ handleDownloadClick, isAnimating }) => (
   <section id="download" className="py-16 sm:py-24">
@@ -10,7 +10,7 @@ export const DownloadSection = ({ handleDownloadClick, isAnimating }) => (
           <AndroidDownloadButton
             onClick={() => {
               handleDownloadClick();
-              sendGAEvent({ event: 'download', value: 'android' });
+              sendGAEvent({ event: "download", value: "android" });
             }}
             isClicked={isAnimating}
           />
@@ -19,7 +19,7 @@ export const DownloadSection = ({ handleDownloadClick, isAnimating }) => (
           <img
             src="/app_store.svg"
             alt="Download on the App Store"
-            style={{ width: '150px', height: 'auto' }}
+            style={{ width: "150px", height: "auto" }}
           />
         </a>
       </div>

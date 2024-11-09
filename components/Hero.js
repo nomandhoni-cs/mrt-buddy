@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { GridPattern } from './GridPattern';
-import AndroidDownloadButton from './AndroidDownloadButton';
-import { Apple, Download } from 'lucide-react';
-import { sendGAEvent } from '@next/third-parties/google';
+import React from "react";
+import { motion } from "framer-motion";
+import { GridPattern } from "./GridPattern";
+import AndroidDownloadButton from "./AndroidDownloadButton";
+import { Apple, Download } from "lucide-react";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export const Hero = ({ handleDownloadClick, isAnimating }) => (
   <section className="relative pt-36 sm:pt-40 pb-16 sm:pb-20 overflow-hidden">
@@ -11,9 +11,9 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
     <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
       <div className="max-w-3xl mx-auto mb-12 sm:mb-20">
         <motion.div
-          initial={{ letterSpacing: '0em' }}
-          animate={{ letterSpacing: '0.1em' }}
-          transition={{ duration: 1, ease: 'easeOut' }}
+          initial={{ letterSpacing: "0em" }}
+          animate={{ letterSpacing: "0.1em" }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 mb-4 sm:mb-6">
             Your Smart MRT Companion
@@ -28,7 +28,7 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
             <AndroidDownloadButton
               onClick={() => {
                 handleDownloadClick();
-                sendGAEvent({ event: 'download', value: 'android' });
+                sendGAEvent({ event: "download", value: "android" });
               }}
               isClicked={isAnimating}
             />
@@ -37,8 +37,8 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => (
             <img
               src="/app_store.svg"
               alt="Download on the App Store"
-              onClick={() => sendGAEvent({ event: 'download', value: 'ios' })}
-              style={{ width: '150px', height: 'auto' }}
+              onClick={() => sendGAEvent({ event: "download", value: "ios" })}
+              style={{ width: "150px", height: "auto" }}
             />
           </a>
         </div>

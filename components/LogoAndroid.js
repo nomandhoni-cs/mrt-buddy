@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const LogoAndroid = ({ className }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor">

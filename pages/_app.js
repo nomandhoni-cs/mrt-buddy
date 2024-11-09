@@ -1,12 +1,12 @@
-import '../styles/globals.css';
-import { Noto_Sans } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google';
-import Head from 'next/head';
+import "../styles/globals.css";
+import { Noto_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import Head from "next/head";
 
 const notoSans = Noto_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export default function App({ Component, pageProps }) {
@@ -15,11 +15,11 @@ export default function App({ Component, pageProps }) {
       <Head>
         <script type="application/ld+json">
           {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            name: 'MRT Buddy',
-            url: 'https://mrtbuddy.com',
-            description: 'Your Dhaka Metro Rail Companion App',
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "MRT Buddy",
+            url: "https://mrtbuddy.com",
+            description: "Your Dhaka Metro Rail Companion App",
           })}
         </script>
 

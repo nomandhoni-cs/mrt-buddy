@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Iphone15Pro = ({ width = 300, height = 600, src, ...props }) => (
   <svg

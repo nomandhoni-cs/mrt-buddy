@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import React from "react";
 
 export const GridPattern = ({
-  className = '',
+  className = "",
   width = 40,
   height = 40,
   x = -1,
@@ -47,7 +47,7 @@ export const GridPattern = ({
                 duration,
                 repeat: Infinity,
                 repeatDelay: Math.random() * repeatDelay,
-                ease: 'linear',
+                ease: "linear",
               }}
               className="text-gray-300"
             />

@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import { StickyNavbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
+import React from "react";
+import Head from "next/head";
+import { StickyNavbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 export default function PrivacyPolicy() {
   return (

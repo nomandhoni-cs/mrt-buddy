@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
-import { StickyNavbar } from '../components/Navbar';
-import pre_contributors from './contributors.json';
-import { Footer } from '../components/Footer';
+import React, { useEffect, useState } from "react";
+import Head from "next/head";
+import { StickyNavbar } from "../components/Navbar";
+import pre_contributors from "./contributors.json";
+import { Footer } from "../components/Footer";
 
 export default function Contributors() {
   // pre dumped contributors list
@@ -14,7 +14,7 @@ export default function Contributors() {
   useEffect(() => {
     // console.log(contributors);
     fetch(
-      'https://api.github.com/repos/aniruddha-adhikary/mrt-buddy/contributors'
+      "https://api.github.com/repos/aniruddha-adhikary/mrt-buddy/contributors"
     )
       .then((res) => res.json())
       .then((data) => {

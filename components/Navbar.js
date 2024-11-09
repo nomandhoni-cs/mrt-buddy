@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const StickyNavbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -16,36 +16,36 @@ export const StickyNavbar = () => {
       setIsNavOpen(false);
     };
 
-    router.events.on('routeChangeComplete', handleRouteChange);
-    router.events.on('routeChangeStart', handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeStart", handleRouteChange);
 
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-      router.events.off('routeChangeStart', handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("routeChangeStart", handleRouteChange);
     };
   }, [router]);
 
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (isNavOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isNavOpen]);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/#download', label: 'Download' },
-    { href: '/contributors', label: 'Contributors' },
-    { href: '/faq', label: 'FAQ' },
-    { href: '/privacy-policy', label: 'Privacy Policy' },
+    { href: "/", label: "Home" },
+    { href: "/#download", label: "Download" },
+    { href: "/contributors", label: "Contributors" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/privacy-policy", label: "Privacy Policy" },
     {
-      href: 'http://github.com/aniruddha-adhikary/mrt-buddy',
-      label: 'GitHub',
+      href: "http://github.com/aniruddha-adhikary/mrt-buddy",
+      label: "GitHub",
       external: true,
     },
   ];
@@ -67,7 +67,7 @@ export const StickyNavbar = () => {
                   key={link.href}
                   href={link.href}
                   className="text-gray-900 hover:text-gray-600"
-                  target={link.external ? '_blank' : undefined}
+                  target={link.external ? "_blank" : undefined}
                 >
                   {link.label}
                 </Link>
@@ -95,8 +95,8 @@ export const StickyNavbar = () => {
                   strokeWidth="2"
                   d={
                     isNavOpen
-                      ? 'M6 18L18 6M6 6l12 12'
-                      : 'M4 6h16M4 12h16M4 18h16'
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16M4 18h16"
                   }
                 />
               </svg>
@@ -107,10 +107,10 @@ export const StickyNavbar = () => {
           <div
             className={`fixed inset-0 z-40 bg-white transform transition-all duration-300 ease-in-out lg:hidden ${
               isNavOpen
-                ? 'translate-x-0 opacity-100'
-                : 'translate-x-full opacity-0'
+                ? "translate-x-0 opacity-100"
+                : "translate-x-full opacity-0"
             }`}
-            style={{ top: '64px', height: 'calc(100vh - 64px)' }}
+            style={{ top: "64px", height: "calc(100vh - 64px)" }}
           >
             <nav className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
@@ -119,7 +119,7 @@ export const StickyNavbar = () => {
                   href={link.href}
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
                   onClick={toggleNav}
-                  target={link.external ? '_blank' : undefined}
+                  target={link.external ? "_blank" : undefined}
                 >
                   {link.label}
                 </Link>

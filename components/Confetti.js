@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import React from 'react';
+import { motion } from "framer-motion";
+import React from "react";
 
 export const Confetti = ({ active }) =>
   active ? (
@@ -14,8 +14,8 @@ export const Confetti = ({ active }) =>
           key={i}
           className="absolute w-2 h-2 bg-indigo-500"
           initial={{
-            x: '50vw',
-            y: '50vh',
+            x: "50vw",
+            y: "50vh",
             scale: 0,
           }}
           animate={{

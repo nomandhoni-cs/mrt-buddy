@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { LogoAndroid } from './LogoAndroid';
+import React from "react";
+import { motion } from "framer-motion";
+import { LogoAndroid } from "./LogoAndroid";
 
 const AndroidDownloadButton = ({ onClick, isClicked }) => {
   return (
@@ -8,8 +8,8 @@ const AndroidDownloadButton = ({ onClick, isClicked }) => {
       onClick={onClick}
       className="download-button-android bg-black text-white px-2 py-4 rounded-lg flex items-center justify-center gap-2"
       style={{
-        width: '150px',
-        height: '50px',
+        width: "150px",
+        height: "50px",
       }}
     >
       <LogoAndroid className="w-10 h-auto pr-1" />

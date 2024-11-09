@@ -1,22 +1,22 @@
-import React from 'react';
-import { FeatureCard } from './FeatureCard';
+import React from "react";
+import { FeatureCard } from "./FeatureCard";
 
 export const Features = () => {
   const features = [
     {
-      title: 'NFC Card Reader',
-      description: 'Instantly check your MRT Pass balance',
-      icon: '📱',
+      title: "NFC Card Reader",
+      description: "Instantly check your MRT Pass balance",
+      icon: "📱",
     },
     {
-      title: 'Transaction History',
-      description: 'View your last 10 transactions',
-      icon: '📊',
+      title: "Transaction History",
+      description: "View your last 10 transactions",
+      icon: "📊",
     },
     {
-      title: 'Pass Compatibility',
-      description: 'Works with both MRT Pass and Rapid Pass',
-      icon: '💳',
+      title: "Pass Compatibility",
+      description: "Works with both MRT Pass and Rapid Pass",
+      icon: "💳",
     },
   ];
 

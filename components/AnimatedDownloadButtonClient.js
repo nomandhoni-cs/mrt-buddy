@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic';
-import AnimatedDownloadButton from './AnimatedDownloadButton';
+import dynamic from "next/dynamic";
+import AnimatedDownloadButton from "./AnimatedDownloadButton";
 
 export const AnimatedDownloadButtonClient = dynamic(
   () => Promise.resolve(AnimatedDownloadButton),

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Iphone15Pro } from './Iphone15Pro';
+import React from "react";
+import { Iphone15Pro } from "./Iphone15Pro";
 
 export const DeviceShowcase = () => {
-  const devices = ['/1.jpeg', '/2.jpeg'];
+  const devices = ["/1.jpeg", "/2.jpeg"];
 
   return (
     <section className="py-4 sm:py-8 md:py-12 overflow-hidden">
@@ -17,9 +17,9 @@ export const DeviceShowcase = () => {
                   src={device}
                   className="w-full transform-gpu hover:scale-102 transition-transform duration-300 ease-in-out"
                   style={{
-                    maxWidth: '100%',
-                    height: 'auto',
-                    aspectRatio: '408/652',
+                    maxWidth: "100%",
+                    height: "auto",
+                    aspectRatio: "408/652",
                   }}
                 />
               </div>
