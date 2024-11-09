@@ -10,7 +10,6 @@ import { DownloadSection } from "../components/DownloadSection";
 
 const HomeComponent = () => {
   const [isAnimating, setIsAnimating] = React.useState(false);
-
   const handleDownloadClick = () => {
     if (!isAnimating) {
       setIsAnimating(true);

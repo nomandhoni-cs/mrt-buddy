@@ -3,7 +3,7 @@ import AndroidDownloadButton from "./AndroidDownloadButton";
 import { sendGAEvent } from "@next/third-parties/google";
 
 export const DownloadSection = ({ handleDownloadClick, isAnimating }) => (
-  <section id="download" className="py-16 sm:py-24">
+  <section id="download" className="py-16 sm:py-24 dark:bg-[#121212]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
       <div className="flex flex-row items-center justify-center gap-4">
         <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk">
@@ -23,7 +23,7 @@ export const DownloadSection = ({ handleDownloadClick, isAnimating }) => (
           />
         </a>
       </div>
-      <p className="text-gray-600 mt-4">
+      <p className="text-gray-600 mt-4 dark:text-gray-50">
         ⚠️ While our app is pending Play Store approval, get updates on our
         WhatsApp channel:
       </p>
@@ -33,7 +33,7 @@ export const DownloadSection = ({ handleDownloadClick, isAnimating }) => (
       >
         Join WhatsApp Channel
       </a>
-      <p className="text-sm text-gray-500 mt-8">
+      <p className="text-sm text-gray-500 mt-8 dark:text-gray-50">
         This is an independent project and is not officially endorsed by or
         affiliated with Dhaka Mass Transit Company Limited (DMTCL).
       </p>

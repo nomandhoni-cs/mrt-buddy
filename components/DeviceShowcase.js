@@ -5,7 +5,7 @@ export const DeviceShowcase = () => {
   const devices = ["/1.jpeg", "/2.jpeg"];
 
   return (
-    <section className="py-4 sm:py-8 md:py-12 overflow-hidden">
+    <section className="py-4 sm:py-8 md:py-12 overflow-hidden dark:bg-[#121212]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8">
           {devices.map((device, index) => (

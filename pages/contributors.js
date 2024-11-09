@@ -35,9 +35,9 @@ export default function Contributors() {
       </Head>
       <StickyNavbar />
 
-      <section className="relative pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-hidden w-full">
+      <section className="relative pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-hidden w-full dark:bg-[#121212]">
         <div className="relative z-10">
-          <h1 className="text-4xl sm:text-5xl font-bold text-center mb-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-center mb-8 dark:text-white">
             Contributors
           </h1>
 
@@ -49,14 +49,14 @@ export default function Contributors() {
                   href={`https://github.com/${contributor.username}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full group flex flex-col items-center bg-gray-100 py-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-transform"
+                  className="w-full group flex flex-col items-center bg-gray-100 dark:bg-gray-800 py-8 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-transform"
                 >
                   <img
                     src={contributor.avatar_url}
                     alt={contributor.username}
                     className="w-24 h-24 rounded-full mb-3 transition-transform "
                   />
-                  <h3 className="text-sm font-medium text-gray-900">
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
                     {contributor.username}
                   </h3>
                 </a>

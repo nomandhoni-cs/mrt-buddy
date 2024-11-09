@@ -1,7 +1,9 @@
-import "../styles/globals.css";
-import { Noto_Sans } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Noto_Sans } from "next/font/google";
 import Head from "next/head";
+import { useTheme } from "../contexts";
+import ThemeProvider from "../providers/ThemeProvider";
+import "../styles/globals.css";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
@@ -11,7 +13,16 @@ const notoSans = Noto_Sans({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={notoSans.className}>
+    <ThemeProvider>
+      <MainContent Component={Component} pageProps={pageProps} />
+    </ThemeProvider>
+  );
+}
+
+function MainContent({ Component, pageProps }) {
+  const { isDarkMode } = useTheme();
+  return (
+    <main className={`${notoSans.className} ${isDarkMode ? "dark" : ""}`}>
       <Head>
         <script type="application/ld+json">
           {JSON.stringify({
@@ -22,7 +33,6 @@ export default function App({ Component, pageProps }) {
             description: "Your Dhaka Metro Rail Companion App",
           })}
         </script>
-
         <meta property="og:url" content="https://mrtbuddy.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="MRT Buddy" />

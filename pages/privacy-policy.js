@@ -5,7 +5,7 @@ import { Footer } from "../components/Footer";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-[#121212]">
       <Head>
         <title>Privacy Policy - MRT Buddy</title>
       </Head>
@@ -13,16 +13,18 @@ export default function PrivacyPolicy() {
 
       <main className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
+          <h1 className="text-4xl font-bold mb-8 dark:text-white">
+            Privacy Policy
+          </h1>
 
-          <p className="text-sm text-gray-600 mb-4">
+          <p className="text-sm text-gray-600 mb-4 dark:text-gray-50">
             Last updated: 4th November, 2024
           </p>
 
-          <section className="space-y-8">
+          <section className="space-y-8 dark:text-white">
             <div>
               <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-50">
                 Welcome to <strong>MRT Buddy</strong> ("we", "us", or "our").
                 This Privacy Policy outlines how we handle any personal
                 information we may access when you use our Android application.
@@ -35,7 +37,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-semibold mb-4">
                 2. Data Collection and Use
               </h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-50">
                 <strong>MRT Buddy</strong> uses Near Field Communication (NFC)
                 technology to read data from your transit cards. The app
                 accesses the balance and trip information stored directly on the
@@ -49,7 +51,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-semibold mb-4">
                 3. No Internet Connectivity
               </h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-50">
                 Our app operates entirely offline. It does not connect to the
                 internet or any external servers. As a result, no data is
                 transmitted off your device at any time.
@@ -58,7 +60,7 @@ export default function PrivacyPolicy() {
 
             <div>
               <h2 className="text-2xl font-semibold mb-4">4. Data Sharing</h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-50">
                 Since we do not collect or store any of your personal
                 information, we do not share any data with third parties.
               </p>
@@ -66,7 +68,7 @@ export default function PrivacyPolicy() {
 
             <div>
               <h2 className="text-2xl font-semibold mb-4">5. Data Security</h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-50">
                 While our app does not store any personal data, we are committed
                 to ensuring that your information remains secure during use. The
                 app only reads the necessary data to display it on your device
@@ -78,7 +80,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-semibold mb-4">
                 6. Children's Privacy
               </h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-50">
                 Our app is not intended for use by children under the age of 13.
                 We do not knowingly collect personal information from children.
                 If you believe that a child has provided us with personal data,
@@ -90,7 +92,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-semibold mb-4">
                 7. Changes to This Privacy Policy
               </h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-50">
                 We may update our Privacy Policy from time to time. Any changes
                 will be posted on this page with an updated "Last updated" date.
                 We encourage you to review this Privacy Policy periodically.
@@ -98,7 +100,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div>
-              <p className="text-gray-700 mt-8">
+              <p className="text-gray-700 mt-8 dark:text-gray-50">
                 By using <strong>MRT Buddy</strong>, you agree to the terms
                 outlined in this Privacy Policy.
               </p>
