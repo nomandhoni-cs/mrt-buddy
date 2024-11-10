@@ -55,26 +55,10 @@ export const BetaModal = ({ isOpen, onClose }) => {
                 <h3 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">Official Play Store Beta</h3>
                 <p className="text-blue-800 dark:text-blue-200 mb-4">Get automatic updates through Play Store:</p>
               <div className="space-y-6">
-                <div className="bg-white dark:bg-gray-700/50 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-                  <h4 className="font-medium mb-3 flex items-center gap-2">
-                    <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">1</span>
-                    <span className="dark:text-white">Find your Play Store email</span>
-                  </h4>
-                  <button 
-                    onClick={() => window.open('https://play.google.com/store/apps', '_blank')}
-                    className="w-full bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/50 dark:hover:bg-blue-900/70 text-blue-700 dark:text-blue-300 px-4 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z"/>
-                    </svg>
-                    Open Play Store Profile
-                  </button>
-                  <p className="text-sm text-blue-600 dark:text-blue-400 mt-2">Look for your email in the top-right profile section</p>
-                </div>
 
                 <div className="bg-white dark:bg-gray-700/50 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
                   <h4 className="font-medium mb-3 flex items-center gap-2">
-                    <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">2</span>
+                    <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">1</span>
                     <span className="dark:text-white">Join Beta Testing Group</span>
                   </h4>
                   <button 
@@ -92,7 +76,7 @@ export const BetaModal = ({ isOpen, onClose }) => {
 
                 <div className="bg-white dark:bg-gray-700/50 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
                   <h4 className="font-medium mb-3 flex items-center gap-2">
-                    <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">3</span>
+                    <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">2</span>
                     <span className="dark:text-white">Install Beta Version</span>
                   </h4>
                   <button 
