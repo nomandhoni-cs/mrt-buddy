@@ -78,6 +78,21 @@ export const BetaModal = ({ isOpen, onClose }) => {
                 <div className="bg-white dark:bg-gray-700/50 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
                   <h4 className="font-medium mb-3 flex items-center gap-2">
                     <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">1</span>
+                    <span className="dark:text-white">Uninstall Previous Version</span>
+                  </h4>
+                  <div className="p-3 bg-red-50 dark:bg-red-900/30 rounded-lg">
+                    <p className="text-sm text-red-600 dark:text-red-400">
+                      If you previously installed the app directly via APK, you need to:
+                    </p>
+                    <ol className="list-decimal list-inside mt-2 text-sm text-red-600 dark:text-red-400">
+                      <li>Uninstall the existing app from your device</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div className="bg-white dark:bg-gray-700/50 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                  <h4 className="font-medium mb-3 flex items-center gap-2">
+                    <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">2</span>
                     <span className="dark:text-white">Join Beta Testing Group</span>
                   </h4>
                   <button 
@@ -95,7 +110,7 @@ export const BetaModal = ({ isOpen, onClose }) => {
 
                 <div className="bg-white dark:bg-gray-700/50 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
                   <h4 className="font-medium mb-3 flex items-center gap-2">
-                    <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">2</span>
+                    <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">3</span>
                     <span className="dark:text-white">Install Beta Version</span>
                   </h4>
                   <button 
@@ -108,22 +123,6 @@ export const BetaModal = ({ isOpen, onClose }) => {
                     Join Beta Program
                   </button>
                   <p className="text-sm text-blue-600 dark:text-blue-400 mt-2">Click to join the beta program and get updates</p>
-                </div>
-
-                <div className="bg-white dark:bg-gray-700/50 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-                  <h4 className="font-medium mb-3 flex items-center gap-2">
-                    <span className="bg-blue-100 dark:bg-blue-900 w-6 h-6 rounded-full flex items-center justify-center text-blue-600 dark:text-blue-300">3</span>
-                    <span className="dark:text-white">Uninstall Previous Version</span>
-                  </h4>
-                  <div className="p-3 bg-red-50 dark:bg-red-900/30 rounded-lg">
-                    <p className="text-sm text-red-600 dark:text-red-400">
-                      If you previously installed the app directly via APK, you need to:
-                    </p>
-                    <ol className="list-decimal list-inside mt-2 text-sm text-red-600 dark:text-red-400">
-                      <li>Uninstall the existing app from your device</li>
-                      <li>Return to Play Store to install the beta version</li>
-                    </ol>
-                  </div>
                 </div>
               </div>
             </div>
