@@ -1,20 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import AndroidDownloadButton from "./AndroidDownloadButton";
 import { sendGAEvent } from "@next/third-parties/google";
+import { BetaModal } from "./BetaModal";
 
-export const DownloadSection = ({ handleDownloadClick, isAnimating }) => (
+export const DownloadSection = ({ handleDownloadClick, isAnimating }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
   <section id="download" className="py-16 sm:py-24 dark:bg-[#121212]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
       <div className="flex flex-row items-center justify-center gap-4">
-        <a href="https://github.com/aniruddha-adhikary/mrt-buddy/releases/latest/download/app-release.apk">
-          <AndroidDownloadButton
-            onClick={() => {
-              handleDownloadClick();
-              sendGAEvent({ event: "download", value: "android" });
-            }}
-            isClicked={isAnimating}
-          />
-        </a>
+        <AndroidDownloadButton
+          onClick={() => {
+            handleDownloadClick();
+            setIsModalOpen(true);
+            sendGAEvent({ event: "download", value: "android-beta" });
+          }}
+          isClicked={isAnimating}
+        />
         <a href="https://apps.apple.com/app/mrt-buddy/id6737849667">
           <img
             src="/app_store.svg"
@@ -38,5 +41,7 @@ export const DownloadSection = ({ handleDownloadClick, isAnimating }) => (
         affiliated with Dhaka Mass Transit Company Limited (DMTCL).
       </p>
     </div>
+    <BetaModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
   </section>
-);
+  );
+};
