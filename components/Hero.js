@@ -46,6 +46,10 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => {
               />
             </a>
         </div>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+          Android version is currently in beta. You can either download the APK file directly or sign up for the Play Store Beta to receive automatic updates.
+          <br />Google may approve our app end of this month.
+        </p>
       </div>
     </div>
     <BetaModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
