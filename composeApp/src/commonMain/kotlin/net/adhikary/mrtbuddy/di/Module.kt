@@ -30,7 +30,8 @@ val appModule = module {
     viewModel { parameters -> 
         TransactionListViewModel(
             cardIdm = parameters.get(),
-            transactionRepository = get()
+            transactionRepository = get(),
+            fileSaver = get()
         )
     }
     
