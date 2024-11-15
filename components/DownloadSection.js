@@ -26,17 +26,7 @@ export const DownloadSection = ({ handleDownloadClick, isAnimating }) => {
           />
         </a>
       </div>
-      <p className="text-gray-600 mt-4 dark:text-gray-50">
-        ⚠️ While our app is pending Play Store approval, get updates on our
-        WhatsApp channel:
-      </p>
-      <a
-        href="https://whatsapp.com/channel/0029VaurMehLI8Yeb3STq42g"
-        className="text-blue-600 hover:text-blue-800 mt-2 inline-block"
-      >
-        Join WhatsApp Channel
-      </a>
-      <p className="text-sm text-gray-500 mt-8 dark:text-gray-50">
+      <p className="text-sm text-gray-500 mt-4 dark:text-gray-50">
         This is an independent project and is not officially endorsed by or
         affiliated with Dhaka Mass Transit Company Limited (DMTCL).
       </p>
