@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { StickyNavbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { CommunitySection } from "../components/CommunitySection";
@@ -19,7 +20,31 @@ export default function Support() {
             Get Support
           </h1>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-8">
+              <h2 className="text-xl font-semibold mb-4 dark:text-white">Quick Links</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <Link href="/tutorials" className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                  <svg className="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  <div>
+                    <h3 className="font-medium dark:text-white">Video Tutorials</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Step-by-step guides</p>
+                  </div>
+                </Link>
+                <Link href="/faq" className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                  <svg className="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <h3 className="font-medium dark:text-white">FAQ</h3>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Common questions</p>
+                  </div>
+                </Link>
+              </div>
+            </div>
+
             <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-lg border-2 border-[#1877F2] dark:border-[#1877F2]">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                 <h2 className="text-3xl font-bold dark:text-white flex items-center gap-3">
