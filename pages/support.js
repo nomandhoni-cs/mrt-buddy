@@ -54,11 +54,11 @@ export default function Support() {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-700">
               <h2 className="text-xl font-semibold mb-4 dark:text-white flex items-center gap-2">
-                <span>Urgent Support</span>
-                <span className="text-red-500">🚨</span>
+                <span>Alternative Support Channel</span>
+                <span>📧</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                For critical technical issues that require immediate attention, you can submit a support ticket.
+                If you prefer not to use social media, you can still get support by submitting a ticket through our help desk.
               </p>
               <a
                 href="https://mrtbuddy.zohodesk.com/portal/en/newticket"
