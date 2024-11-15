@@ -21,12 +21,12 @@ export default function Support() {
 
           <div className="space-y-8">
             <div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-lg border-2 border-[#1877F2] dark:border-[#1877F2]">
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                 <h2 className="text-3xl font-bold dark:text-white flex items-center gap-3">
                   <span>Join Our Community</span>
                   <span className="text-2xl">👥</span>
                 </h2>
-                <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
+                <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium self-start sm:self-center">
                   Recommended
                 </div>
               </div>
