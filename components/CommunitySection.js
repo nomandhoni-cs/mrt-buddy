@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const CommunitySection = () => (
-  <section className="w-full py-4 bg-blue-600 text-white text-center sticky top-[64px] z-40">
+  <section className="w-full py-4 bg-blue-600 text-white text-center">
     <div className="container mx-auto px-4 flex items-center justify-center gap-4 flex-wrap">
       <span className="font-bold text-base">🚀 Shape the Future!</span>
       <p className="text-base">
