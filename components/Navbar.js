@@ -43,6 +43,7 @@ export const StickyNavbar = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/#download", label: "Download" },
+    { href: "/tutorials", label: "Tutorials" },
     { href: "/contributors", label: "Contributors" },
     { href: "/faq", label: "FAQ" },
     { href: "/support", label: "Support" },
