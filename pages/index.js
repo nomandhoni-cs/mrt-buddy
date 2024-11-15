@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { StickyNavbar } from "../components/Navbar";
 import dynamic from "next/dynamic";
+import { CommunitySection } from '../components/CommunitySection';
 import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { DeviceShowcase } from "../components/DeviceShowcase";
@@ -20,11 +21,12 @@ const HomeComponent = () => {
   };
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white relative">
       <Head>
         <title>MRT Buddy - Your Dhaka Metro Rail Companion</title>
       </Head>
       <StickyNavbar />
+      <CommunitySection />
       <Hero
         handleDownloadClick={handleDownloadClick}
         isAnimating={isAnimating}

@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { StickyNavbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { CommunitySection } from "../components/CommunitySection";
 
 export default function PrivacyPolicy() {
   return (
@@ -10,6 +11,7 @@ export default function PrivacyPolicy() {
         <title>Privacy Policy - MRT Buddy</title>
       </Head>
       <StickyNavbar />
+      <CommunitySection />
 
       <main className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-3xl mx-auto">

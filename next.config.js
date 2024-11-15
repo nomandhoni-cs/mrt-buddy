@@ -7,15 +7,6 @@ module.exports = {
   basePath: process.env.GITHUB_ACTIONS ? "/mrt-buddy-web" : "",
   assetPrefix: process.env.GITHUB_ACTIONS ? "/mrt-buddy-web/" : "",
   trailingSlash: true,
-  async redirects() {
-    return [
-      {
-        source: '/support',
-        destination: 'https://mrtbuddy.zohodesk.com/portal/en/newticket',
-        permanent: false,
-      },
-    ];
-  },
   async rewrites() {
     return [
       {

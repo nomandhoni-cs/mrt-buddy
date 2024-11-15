@@ -45,6 +45,7 @@ export const StickyNavbar = () => {
     { href: "/#download", label: "Download" },
     { href: "/contributors", label: "Contributors" },
     { href: "/faq", label: "FAQ" },
+    { href: "/support", label: "Support" },
     { href: "/privacy-policy", label: "Privacy Policy" },
     {
       href: "http://github.com/aniruddha-adhikary/mrt-buddy",
