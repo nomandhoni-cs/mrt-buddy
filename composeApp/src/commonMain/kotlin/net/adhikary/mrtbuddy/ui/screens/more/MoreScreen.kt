@@ -142,9 +142,7 @@ fun MoreScreen(
             RoundedButton(
                 text = stringResource(Res.string.openSourceLicenses),
                 painter = painterResource(Res.drawable.license), // Ensure you have a 'license' drawable
-                onClick = {
-                    viewModel.onAction(MoreScreenAction.OpenLicenses)
-                }
+                onClick = onNavigateToLicenses
             )
         }
 
