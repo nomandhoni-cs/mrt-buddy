@@ -150,6 +150,9 @@ fun MainScreen(
             is Screen.TransactionList -> {
                 TransactionListScreen(
                     cardIdm = (navController.currentScreen as Screen.TransactionList).cardIdm,
+                    onBack = {
+                        navController.navigateBack()
+                    },
                     paddingValues = paddingValues
                 )
             }
