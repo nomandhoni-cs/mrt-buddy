@@ -73,7 +73,9 @@
     <string name="helpAndSupportButton">Help and Support</string>
     <string name="nonAffiliationDisclaimer">This is an independent project and is not officially endorsed by or affiliated with Dhaka Mass Transit Company Limited (DMTCL).</string>
     <string name="readOnlyDisclaimer">The app is designed solely for reading card information and does not support recharging, topping up, or modifying card balances.</string>
-    
+    <string name="on">On</string>
+    <string name="off">Off</string>
+
     <!-- History and Transaction screens -->
     <string name="transactions">Transactions</string>
     <string name="history">History</string>
@@ -97,6 +99,7 @@
     <string name="settings">Settings</string>
     <string name="autoSaveCardDetails">Auto-save card details</string>
     <string name="autoSaveCardDetailsDescription">Automatically save card details when scanning</string>
+    <string name="darkMode">Dark Mode</string>
 
     <!-- Time ago strings -->
     <string name="justNow">Just now</string>

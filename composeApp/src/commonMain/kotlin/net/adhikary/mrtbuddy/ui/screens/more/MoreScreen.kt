@@ -33,10 +33,14 @@ import mrtbuddy.composeapp.generated.resources.autoSaveCardDetailsDescription
 import mrtbuddy.composeapp.generated.resources.contributors
 import mrtbuddy.composeapp.generated.resources.help
 import mrtbuddy.composeapp.generated.resources.helpAndSupportButton
+import mrtbuddy.composeapp.generated.resources.darkMode
+import mrtbuddy.composeapp.generated.resources.dark_mode
 import mrtbuddy.composeapp.generated.resources.language
 import mrtbuddy.composeapp.generated.resources.license
 import mrtbuddy.composeapp.generated.resources.nonAffiliationDisclaimer
 import mrtbuddy.composeapp.generated.resources.openSourceLicenses
+import mrtbuddy.composeapp.generated.resources.on
+import mrtbuddy.composeapp.generated.resources.off
 import mrtbuddy.composeapp.generated.resources.policy
 import mrtbuddy.composeapp.generated.resources.privacyPolicy
 import mrtbuddy.composeapp.generated.resources.readOnlyDisclaimer
@@ -112,6 +116,20 @@ fun MoreScreen(
                 trailing = {
                     Text(
                         text = if (uiState.currentLanguage == Language.English.isoFormat) "English" else "বাংলা",
+                        modifier = Modifier.padding(end = 8.dp)
+                    )
+                }
+            )
+
+            RoundedButton(
+                text = stringResource(Res.string.darkMode),
+                painter = painterResource(Res.drawable.dark_mode),
+                onClick = { 
+                    viewModel.onAction(MoreScreenAction.SetDarkMode(!uiState.isDarkModeEnabled))
+                },
+                trailing = {
+                    Text(
+                        text = stringResource(if (uiState.isDarkModeEnabled) Res.string.on else Res.string.off),
                         modifier = Modifier.padding(end = 8.dp)
                     )
                 }

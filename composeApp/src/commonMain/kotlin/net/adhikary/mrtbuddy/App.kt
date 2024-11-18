@@ -7,30 +7,29 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import net.adhikary.mrtbuddy.managers.RescanManager
 import net.adhikary.mrtbuddy.nfc.getNFCManager
+import net.adhikary.mrtbuddy.repository.SettingsRepository
 import net.adhikary.mrtbuddy.ui.screens.home.MainScreen
 import net.adhikary.mrtbuddy.ui.screens.home.MainScreenAction
 import net.adhikary.mrtbuddy.ui.screens.home.MainScreenEvent
 import net.adhikary.mrtbuddy.ui.screens.home.MainScreenState
-import net.adhikary.mrtbuddy.ui.screens.home.MainScreen
 import net.adhikary.mrtbuddy.ui.screens.home.MainScreenViewModel
 import net.adhikary.mrtbuddy.ui.theme.MRTBuddyTheme
 import net.adhikary.mrtbuddy.utils.observeAsActions
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 @Preview
 fun App() {
     val mainVm = koinViewModel<MainScreenViewModel>()
+    val settingsRepository: SettingsRepository = koinInject()
     val scope = rememberCoroutineScope()
     val nfcManager = getNFCManager()
 
@@ -68,7 +67,10 @@ fun App() {
 
     nfcManager.startScan()
 
-    MRTBuddyTheme {
+    val isDarkMode by settingsRepository.isDarkModeEnabled.collectAsState()
+    MRTBuddyTheme(
+        darkTheme = isDarkMode
+    ) {
         val state: MainScreenState by mainVm.state.collectAsState()
 
         LocalizedApp(
