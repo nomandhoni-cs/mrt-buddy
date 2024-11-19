@@ -23,7 +23,7 @@ const HomeComponent = () => {
   return (
     <main className="min-h-screen bg-white relative">
       <Head>
-        <title>MRT Buddy - Your Dhaka Metro Rail Companion</title>
+        <title>MRT Buddy - Your Dhaka Metro Rail + Rapid Pass App</title>
       </Head>
       <StickyNavbar />
       <CommunitySection />

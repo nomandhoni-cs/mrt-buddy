@@ -23,12 +23,12 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:bg-gradient-to-r dark:from-slate-100 dark:to-slate-200 mb-4 sm:mb-6">
-            Your Smart MRT Companion
+            Your Smart MRT + Rapid Pass Companion
           </h1>
         </motion.div>
         <p className="text-lg sm:text-xl text-gray-600 leading-relaxed dark:text-white">
-          Manage your Dhaka MRT cards, check fares, and track your journeys with
-          ease using NFC technology
+          Manage your Dhaka MRT and Rapid Pass cards, check fares, and track your journeys with
+          ease using your NFC-enabled Smartphone
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <AndroidDownloadButton
