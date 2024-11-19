@@ -39,11 +39,11 @@ function MainContent({ Component, pageProps }) {
         <meta property="og:locale" content="en_US" />
         <meta
           property="og:title"
-          content="MRT Buddy - Your Dhaka Metro Rail Companion App"
+          content="MRT Buddy - Your Dhaka Metro Rail + Rapid Pass App"
         />
         <meta
           property="og:description"
-          content="MRT Buddy is an unofficial community-driven Android app designed to check the balance of your Dhaka MRT Card. It reads the last 10 transactions from the RapidPass / MRT Card. No internet connectivity required. This app is not affiliated with DMTCL, JICA, Government of Bangladesh or any of its affiliates"
+          content="MRT Buddy is an unofficial community-driven Android + iOS app designed to check the balance of your Dhaka MRT Card and Rapid Pass. It reads transactions from the RapidPass / MRT Card. No internet connectivity required. This app is not affiliated with DMTCL, JICA, Government of Bangladesh or any of its affiliates"
         />
         <meta property="og:image" content="https://mrtbuddy.com/cover.png" />
 
@@ -57,7 +57,7 @@ function MainContent({ Component, pageProps }) {
         />
         <meta
           name="twitter:description"
-          content="MRT Buddy is an unofficial community-driven Android app designed to check the balance of your Dhaka MRT Card. It reads the last 10 transactions from the RapidPass / MRT Card. No internet connectivity required. This app is not affiliated with DMTCL, JICA, Government of Bangladesh or any of its affiliates"
+          content="MRT Buddy is an unofficial community-driven Android + iOS app designed to check the balance of your Dhaka MRT Card and Rapid Pass. It reads transactions from the RapidPass / MRT Card. No internet connectivity required. This app is not affiliated with DMTCL, JICA, Government of Bangladesh or any of its affiliates"
         />
         <meta
           property="twitter:image"
