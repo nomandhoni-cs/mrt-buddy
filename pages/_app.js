@@ -1,5 +1,5 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
-import { Noto_Sans } from "next/font/google";
+import { Noto_Sans, Noto_Sans_Bengali } from "next/font/google";
 import Head from "next/head";
 import { useTheme } from "../contexts";
 import ThemeProvider from "../providers/ThemeProvider";
@@ -7,6 +7,12 @@ import "../styles/globals.css";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const notoSansBengali = Noto_Sans_Bengali({
+  subsets: ["bengali"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
@@ -22,7 +28,7 @@ export default function App({ Component, pageProps }) {
 function MainContent({ Component, pageProps }) {
   const { isDarkMode } = useTheme();
   return (
-    <main className={`${notoSans.className} ${isDarkMode ? "dark" : ""}`}>
+    <main className={`${notoSans.className} ${notoSansBengali.className} ${isDarkMode ? "dark" : ""}`}>
       <Head>
         <script type="application/ld+json">
           {JSON.stringify({
