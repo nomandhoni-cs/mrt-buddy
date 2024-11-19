@@ -3,7 +3,6 @@ import Head from "next/head";
 import { StickyNavbar } from "../components/Navbar";
 import { CommunitySection } from '../components/CommunitySection';
 import { Footer } from "../components/Footer";
-import { VideoTutorialsModal } from "../components/VideoTutorialsModal";
 
 const tutorials = [
   {
