@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { BetaModal } from "./BetaModal";
-import { VideoTutorialsModal } from "./VideoTutorialsModal";
 import { motion } from "framer-motion";
 import { GridPattern } from "./GridPattern";
 import AndroidDownloadButton from "./AndroidDownloadButton";
@@ -10,8 +9,6 @@ import { sendGAEvent } from "@next/third-parties/google";
 
 export const Hero = ({ handleDownloadClick, isAnimating }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
-  
   return (
   <section className="relative pt-36 sm:pt-40 pb-16 sm:pb-20 overflow-hidden dark:bg-[#121212]">
     <GridPattern className="opacity-30" numSquares={150} maxOpacity={0.3} />
@@ -69,10 +66,7 @@ export const Hero = ({ handleDownloadClick, isAnimating }) => {
         </div>
       </div>
     </div>
-    <>
-      <BetaModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <VideoTutorialsModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} />
-    </>
+    <BetaModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
   </section>
   );
 };

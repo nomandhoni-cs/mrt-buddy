@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { StickyNavbar } from "../components/Navbar";
-import dynamic from "next/dynamic";
 import { CommunitySection } from '../components/CommunitySection';
 import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
@@ -42,5 +41,4 @@ const HomeComponent = () => {
   );
 };
 
-// Export the client-side wrapped component
-export default dynamic(() => Promise.resolve(HomeComponent), { ssr: false });
+export default HomeComponent;
